@@ -2,8 +2,6 @@ package com.chat.DTO;
 
 import java.util.List;
 
-import org.apache.logging.log4j.message.Message;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,15 +10,13 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ChatResponse {
-	private List<Choice> choices;
+    private List<Choice> choices;
 
-	@Data
-	@AllArgsConstructor
-	@NoArgsConstructor
-	public static class Choice {
-
-		private int index;
-		private Message message;
-	}
-
+    @Data
+    @AllArgsConstructor
+    @NoArgsConstructor
+    public static class Choice {
+        private int index;
+        private com.chat.DTO.Message message; 
+    }
 }
